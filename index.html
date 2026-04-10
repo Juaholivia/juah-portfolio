@@ -177,13 +177,16 @@
     opacity: 0;
     transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   }
-
-  .hover-image img {
-    width: 840px;
-    height: 560px;
-    object-fit: cover;
+.hover-image img {
+    /* Change these values to adjust the "Movie Size" */
+    width: 55vw;         /* Uses 55% of the viewport width */
+    height: 30vw;        /* Height relative to width to keep it long */
+    max-height: 70vh;    /* Prevents it from getting too tall on vertical screens */
+    
+    object-fit: cover;   /* This crops the image to fill the wide box */
     display: block;
-    filter: contrast(1.02) saturate(0.95);
+    filter: contrast(1.05) saturate(0.9); /* Subtle cinematic color grade */
+    border-radius: 2px;  /* Optional: tiny rounded corner for a polished look */
   }
 
   .hover-image.visible { opacity: 1; }
